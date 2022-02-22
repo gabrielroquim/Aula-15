@@ -1,5 +1,5 @@
 {
-    "baseURL": "http://lojaebac.ebaconline.art.br/",
+    "baseUrl": "http://lojaebac.ebaconline.art.br/",
     "reporter": "mochawesome",
     "reporterOptions": {
         "reportDir": "mochawesome-report",
@@ -10,7 +10,4 @@
    
 }
 
-{
-    "baseURL": "http://lojaebac.ebaconline.art.br/",
-}
 

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-22T17:20:30.874Z",
+    "end": "2022-02-22T17:20:32.355Z",
+    "duration": 1481,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "89e79459-6204-4410-8bbd-8b5ea99daa4c",
+      "title": "",
+      "fullFile": "cypress/integration/API/POSTListarProdutos.spec.js",
+      "file": "cypress/integration/API/POSTListarProdutos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28b8d8a9-3580-4fa9-ac3f-9a83a3215d6a",
+          "title": "listar produtos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ver produtos",
+              "fullTitle": "listar produtos Ver produtos",
+              "timedOut": null,
+              "duration": 1193,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'produtos',\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.status).to.equal(200);\n  cy.log(response.statusText);\n  cy.log(response.body); //cy.url().should('eq', 'http://lojaebac.ebaconline.art.br/xmlrpc.php')\n  //cy.url().should('contain', '#lojaebac.ebaconline.art')\n  //expect(response.headers.title).to.equal('produtos')\n});",
+              "err": {},
+              "uuid": "4f59f8f1-9d80-417d-8897-4077c3f509f2",
+              "parentUUID": "28b8d8a9-3580-4fa9-ac3f-9a83a3215d6a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4f59f8f1-9d80-417d-8897-4077c3f509f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1193,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

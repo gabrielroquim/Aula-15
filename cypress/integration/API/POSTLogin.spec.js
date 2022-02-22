@@ -1,7 +1,7 @@
 /// <reference types = "cypress"/>
 
 
-describe('Teste de login loja ebac', () => {
+describe('Teste de login loja ebac -  Usando fixtures', () => {
 
     it.only('login', () => {
         cy.request({

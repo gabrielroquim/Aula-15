@@ -1,7 +1,7 @@
 /// <reference types="Cypress"/>
 var faker = require('faker-br');
 
-describe('Tela de Comentários', () => {
+describe('Tela de Comentários -  usando faker', () => {
     beforeEach(() => {
         cy.visit('minha-conta')
 
@@ -13,6 +13,7 @@ describe('Tela de Comentários', () => {
         cy.get('#reg_email').type(faker.internet.email())
         cy.get('#reg_password').type(faker.internet.password())
         cy.get(':nth-child(4) > .button').click()
+        cy.get('h1.page.title').should('contain', 'Minha conta')
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
 
 

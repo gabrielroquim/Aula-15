@@ -1,28 +1,23 @@
 /// <reference types="Cypress"/>
 
+const perfil =  require('../../fixtures/perfil.json')
 
-describe('listar produtos', () => {
+describe('listar produtos - unsando fixtures para logar', () => {
     before(() => {
-        cy.login('aluno_ebac@teste.com', 'teste@teste.com' )
+        cy.login(perfil.usuario, perfil.senha)
     });
 
-    it('Ver produtos', () => {
+    it('Checar produtos', () => {
 
         cy.request({
-            method: 'POST',
+            method: 'GET',
             url:'produtos',
             
-            failOnStatusCode: false
+            //failOnStatusCode: false
         }).then((response) => {
-            expect(response.status).to.equal(200);        
-            cy.log(response.statusText)
-            cy.log(response.body)
-         
-         
-
-           //cy.url().should('eq', 'http://lojaebac.ebaconline.art.br/xmlrpc.php')
-           //cy.url().should('contain', '#lojaebac.ebaconline.art')
-            //expect(response.headers.title).to.equal('produtos')
+            expect(response.status).to.equal(200);            
+            expect(response.body).to.be.not.null; 
+            cy.log(response.statusText)   
            
     });
 });

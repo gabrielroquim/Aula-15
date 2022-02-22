@@ -1,6 +1,6 @@
 /// <reference types="Cypress"/>
 
-const perfil =  require('../../fixtures/perfil.json')
+const perfil = require('../../fixtures/perfil.json')
 
 describe('listar produtos - unsando fixtures para logar', () => {
     before(() => {
@@ -11,14 +11,14 @@ describe('listar produtos - unsando fixtures para logar', () => {
 
         cy.request({
             method: 'GET',
-            url:'produtos',
-            
+            url: 'produtos',
+
             //failOnStatusCode: false
         }).then((response) => {
-            expect(response.status).to.equal(200);            
-            expect(response.body).to.be.not.null; 
-            cy.log(response.statusText)   
-           
+            expect(response.status).to.equal(200);
+            expect(response.body).to.be.not.null;
+            cy.log(response.statusText)
+
+        });
     });
-});
 })

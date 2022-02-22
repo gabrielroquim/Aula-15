@@ -16,7 +16,8 @@ describe('Teste de login loja ebac -  Usando fixtures', () => {
             //expect(response.body).to.be.not.null;   
            // expect(response.body).to.equal(name)            
 expect(response.toString.name).to.equal('toString');
-//expect(response.body).to.include('Minha conta')
+expect(response.h1-page-title).to.equal('Minha conta')
+//cy.get('h1.page-title').should('contain', 'Minha conta')
 //expect(response.title).to.equal('Minha conta')
 //expect(response.body.email).to.equal("aluno_ebac@teste.com")
 

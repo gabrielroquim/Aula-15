@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    
+    stages {
+       stage('Clonar o repositorio') {
+            steps {
+               git branch: 'main', url: 'https://github.com/gabrielroquim/Aula-15.git'
+            }
+        }
+        
+        stage('Instalar depêndencias') {
+            steps {
+               bat 'npm install'
+            }
+        }   
+    
+        stage('Executar os testes') {
+            steps {
+                bat'npm run cy:run'
+            }        
+        }
+    
+    }
+}
+

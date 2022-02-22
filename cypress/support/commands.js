@@ -23,3 +23,24 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('login', (email, senha) => {
+    cy.request({
+        method: 'POST',
+        url: 'minha-conta',
+        body: {
+            "email": email,
+            "password": senha
+        }
+    }).then((response) => {
+        //expect(response.status).to.equal(200)
+        //return response.body.authorization
+    })
+});
+
+Cypress.Commands.add('user', (usuario, senha) => {
+    cy.get('#username').type(usuario)
+    cy.get('#password').type(senha, { log: false })
+    cy.get('.woocommerce-form > .button').click()
+});

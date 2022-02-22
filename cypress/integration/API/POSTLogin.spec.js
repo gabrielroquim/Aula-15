@@ -3,7 +3,7 @@
 
 describe('Teste de login loja ebac', () => {
 
-    it('login', () => {
+    it.only('login', () => {
         cy.request({
             method: 'POST',
             url:'minha-conta',

@@ -13,7 +13,7 @@ describe('Tela de Comentários -  usando faker', () => {
         cy.get('#reg_email').type(faker.internet.email())
         cy.get('#reg_password').type(faker.internet.password())
         cy.get(':nth-child(4) > .button').click()
-        cy.get('h1.page.title').should('contain', 'Minha conta')
+        cy.get('h1.page-title').should('contain', 'Minha conta')
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
 
 

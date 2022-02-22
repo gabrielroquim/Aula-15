@@ -4,7 +4,7 @@ pipeline {
     stages {
        stage('Clonar o repositorio') {
             steps {
-               git branch: 'main', url: 'https://github.com/gabrielroquim/Aula-15.git'
+               git branch: 'master', url: 'https://github.com/gabrielroquim/Aula-15.git'
             }
         }
         
